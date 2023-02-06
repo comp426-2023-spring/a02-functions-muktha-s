@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import minimist from 'minimist';
+import minimist from "minimist";
 import moment from 'moment-timezone';
 import fetch from "node-fetch";
 
@@ -24,7 +24,7 @@ if (args.z) {
 	timezone = args.z; 
 }
 
-if (args.d) {
+if (args.d == 0 || args.d) {
 	day = args.d; 
 } else {
 	day = 1; 
