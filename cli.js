@@ -17,7 +17,7 @@ if (args.h) {
 	process.exit(0); 
 } 
 
-const timezone = moment.tz.guess(); 
+var timezone = moment.tz.guess(); 
 var day; 
  
 if (args.z) {
