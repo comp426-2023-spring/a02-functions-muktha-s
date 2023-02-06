@@ -41,8 +41,20 @@ if (args.n && args.s) {
 	process.exit(0); 
 } 
 
-let lat = 0; 
+let lat = 0;
 let long = 0;
+
+if (args.s) {
+	lat = -args.s; 
+} else {
+	lat = args.n; 
+
+if (args.w) {
+	long = -args.w; 
+} else {
+	long = args.e
+
+
 
  
 
