@@ -19,7 +19,7 @@ if (args.h) {
 
 const timezone = moment.tz.guess(); 
 var day; 
-
+ 
 if (args.z) {
 	timezone = args.z; 
 }
@@ -31,7 +31,7 @@ if (args.d == 0 || args.d) {
 } 
 	 
 
-if (args.e && args.w) {
+/*if (args.e && args.w) {
 	console.log("Longitude cannot be input more than once."); 
 	process.exit(0);
 }  
@@ -39,24 +39,27 @@ if (args.e && args.w) {
 if (args.n && args.s) {
 	console.log("Latitude cannot be input more than once."); 
 	process.exit(0); 
-} 
+}*/  
 
 let lat = 0;
 let long = 0;
 
 if (args.s) {
 	lat = -args.s; 
-} else {
+} else if (args.n) {
 	lat = args.n; 
 
 if (args.w) {
 	long = -args.w; 
-} else {
+} else if (args.e) {
 	long = args.e
 
-
-
- 
+if (!(long && lat)) {
+	console.log("Latitude must be in range"); 
+	process.exit(0); 
+} 
+	
+	
 
 
 
