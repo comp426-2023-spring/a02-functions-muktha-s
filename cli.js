@@ -48,11 +48,13 @@ if (args.s) {
 	lat = -args.s; 
 } else if (args.n) {
 	lat = args.n; 
+}
 
 if (args.w) {
 	long = -args.w; 
 } else if (args.e) {
 	long = args.e
+}
 
 if (!(long && lat)) {
 	console.log("Latitude must be in range"); 
@@ -62,7 +64,7 @@ if (!(long && lat)) {
 const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=" + lat
 + "&longitude=" + long + "&timezone=" + timezone + "&daily=precipitation_hours");
 
-const data = await response.json(); i
+const data = await response.json();
 
 if (args.j) {
 	console.log(data); 
