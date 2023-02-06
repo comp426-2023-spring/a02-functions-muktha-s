@@ -31,16 +31,6 @@ if (args.d == 0 || args.d) {
 } 
 	 
 
-/*if (args.e && args.w) {
-	console.log("Longitude cannot be input more than once."); 
-	process.exit(0);
-}  
-
-if (args.n && args.s) {
-	console.log("Latitude cannot be input more than once."); 
-	process.exit(0); 
-}*/  
-
 let lat = 0;
 let long = 0;
 
